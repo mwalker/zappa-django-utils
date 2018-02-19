@@ -1,10 +1,10 @@
-from django.db.backends.sqlite3.base import DatabaseWrapper
+from django.contrib.gis.db.backends.spatialite.base import DatabaseWrapper
 
 from zappa_django_utils.db.s3_database_backer import S3DatabaseBacker
 
 class DatabaseWrapper(DatabaseWrapper, S3DatabaseBacker):
     """
-    Wraps the normal Django SQLite DB engine in an S3 backer!
+    Wraps the normal Django Spatialite DB engine in an S3 backer!
 
     """
 
